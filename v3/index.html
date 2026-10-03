@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Evaneos Travel · Votre voyage sur mesure</title>
+<meta name="description" content="Evaneos Travel construit des voyages sur mesure au départ d’Alger : vos envies, votre budget, votre rythme.">
+<link rel="icon" href="../img/mark.svg">
+<link rel="stylesheet" href="v3.css">
+</head><body>
+<header class="top">
+  <a href="#" class="logo" aria-label="Evaneos Travel"><img src="../img/mark-light.svg" alt=""><img src="../img/word-light.svg" alt="Evaneos Travel" class="w"></a>
+  <a class="call" href="tel:+213555398266">0555 39 82 66</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="sky" aria-hidden="true"><span class="trail t1"></span><span class="trail t2"></span></div>
+  <div class="hero-in">
+    <div class="hero-txt">
+      <p class="kicker">Voyages sur mesure au départ d’Alger</p>
+      <h1>Vous rêvez.<br>On le construit.</h1>
+      <p class="sub">Chez Evaneos Travel, la plupart des voyages ne sortent pas d’un catalogue : ils se construisent avec vous, autour de vos envies, de vos dates et de votre budget.</p>
+      <a class="btn" href="#atelier">Composer mon voyage</a>
+    </div>
+    <div class="passport" id="passport" aria-label="Passeport Evaneos">
+      <div class="pp-page pp-inside">
+        <p class="pp-label">Titulaire</p><p class="pp-val">Vous</p>
+        <p class="pp-label">Destination</p><p class="pp-val">Celle que vous choisirez</p>
+        <p class="pp-label">Programme</p><p class="pp-val">Fait sur mesure</p>
+        <div class="pp-mrz">P&lt;DZAEVANEOS&lt;&lt;TRAVEL&lt;&lt;SUR&lt;MESURE&lt;&lt;&lt;&lt;</div>
+      </div>
+      <div class="pp-cover" id="cover">
+        <div class="pp-front"><img src="../img/logo-light.svg" alt=""><span>Passeport voyage</span></div>
+        <div class="pp-back"><img src="../img/mark-light.svg" alt=""><p>Bienvenue à bord</p><small>Evaneos Travel · Ben Aknoun</small></div>
+      </div>
+    </div>
+  </div>
+  <a class="scroll" href="#atelier" aria-label="Descendre vers l’atelier"><span></span></a>
+</section>
+
+<section class="atelier" id="atelier">
+  <div class="at-head">
+    <h2>L’atelier sur mesure</h2>
+    <p>Répondez à cinq questions. Chaque réponse tamponne votre passeport, et votre conseiller reçoit le brief complet.</p>
+  </div>
+  <div class="at-grid">
+    <div class="steps">
+      <fieldset class="q" data-q="envie">
+        <legend><b>1</b>Quelle envie ?</legend>
+        <div class="opts multi">
+          <button type="button" data-v="mer">Mer et plage</button>
+          <button type="button" data-v="culture">Culture et villes</button>
+          <button type="button" data-v="aventure">Aventure</button>
+          <button type="button" data-v="neige">Neige et nature</button>
+          <button type="button" data-v="shopping">Shopping</button>
+        </div>
+      </fieldset>
+      <fieldset class="q" data-q="qui">
+        <legend><b>2</b>Avec qui ?</legend>
+        <div class="opts">
+          <button type="button" data-v="couple">En couple</button>
+          <button type="button" data-v="famille">En famille</button>
+          <button type="button" data-v="solo">En solo</button>
+          <button type="button" data-v="groupe">Entre amis</button>
+        </div>
+      </fieldset>
+      <fieldset class="q" data-q="duree">
+        <legend><b>3</b>Combien de nuits ?</legend>
+        <div class="range"><input type="range" id="nuits" min="1" max="14" value="7" aria-label="Nombre de nuits"><output id="nuits-o">7 nuits</output></div>
+      </fieldset>
+      <fieldset class="q" data-q="budget">
+        <legend><b>4</b>Budget par personne ?</legend>
+        <div class="range"><input type="range" id="budget" min="50000" max="350000" step="10000" value="200000" aria-label="Budget par personne"><output id="budget-o">200 000 DZD</output></div>
+      </fieldset>
+      <fieldset class="q" data-q="hotel">
+        <legend><b>5</b>Quel confort ?</legend>
+        <div class="opts">
+          <button type="button" data-v="all">All inclusive</button>
+          <button type="button" data-v="pdj">Petit déjeuner</button>
+          <button type="button" data-v="5">Hôtel 5 étoiles</button>
+          <button type="button" data-v="libre">Peu importe</button>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="book-side">
+      <div class="visa" id="visa">
+        <div class="visa-l"><p class="vt">Visas</p><div class="stamps" id="stamps"></div></div>
+        <div class="visa-r">
+          <p class="vt">Votre carnet</p>
+          <div id="carnet"><p class="empty">Faites un premier choix pour voir les destinations qui vous correspondent.</p></div>
+        </div>
+      </div>
+      <p class="note"><span class="dot"></span>Tarifs de l’été 2026 repris des publications d’Evaneos Travel · à valider par l’administration d’Evaneos Travel</p>
+      <button class="btn wide" id="send" type="button">Envoyer mon brief à un conseiller</button>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <h2>Comment on construit votre voyage</h2>
+  <ol class="road">
+    <li><b>Vos envies</b><p>Vous nous dites où, quand, avec qui et avec quel budget, à l’agence ou sur WhatsApp.</p></li>
+    <li><b>Une proposition</b><p>On revient vers vous avec un programme et un prix : vols, hôtel, transferts, visites.</p></li>
+    <li><b>Les ajustements</b><p>On change l’hôtel, les dates ou les visites jusqu’à ce que ce soit exactement votre voyage.</p></li>
+    <li><b>La réservation</b><p>L’agence réserve tout. Vous recevez vos documents de voyage.</p></li>
+    <li><b>Le voyage</b><p>Accueil à l’arrivée et assistance 24/7 jusqu’au retour à Alger.</p></li>
+  </ol>
+</section>
+
+<section class="dests">
+  <h2>Quelques voyages déjà construits</h2>
+  <div class="mosaic" id="mosaic"></div>
+</section>
+
+<section class="contact">
+  <div>
+    <h2>Venez en parler autour d’un café</h2>
+    <p>Cité Sonelgaz n°19, Ben Aknoun, Alger 16000</p>
+    <div class="nums"><a href="tel:+21323384444">023 38 44 44</a><a href="tel:+213555398266">0555 39 82 66</a><a href="tel:+213795835896">0795 83 58 96</a><a href="https://wa.me/213795835896" target="_blank" rel="noopener">WhatsApp</a></div>
+    <p><a href="mailto:evaneostravels@gmail.com">evaneostravels@gmail.com</a> · <a href="https://www.instagram.com/evaneos_travels/" target="_blank" rel="noopener">@evaneos_travels</a></p>
+  </div>
+  <iframe class="map" src="https://maps.google.com/maps?q=Cit%C3%A9%20Sonelgaz%2C%20Ben%20Aknoun%2C%20Alger&z=15&output=embed" loading="lazy" title="Carte : Evaneos Travel à Ben Aknoun" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+<footer class="foot"><img src="../img/logo-light.svg" alt="Evaneos Travel"><p>© 2026 SARL Evaneos Travel · Agence de voyage et de tourisme</p></footer>
+</main>
+
+<dialog id="brief" aria-labelledby="brief-t">
+  <form method="dialog" class="x"><button aria-label="Fermer">×</button></form>
+  <h3 id="brief-t">Votre brief</h3>
+  <ul id="brief-recap"></ul>
+  <form id="bf" class="bf">
+    <label>Nom complet<input required autocomplete="name"></label>
+    <label>Téléphone ou WhatsApp<input required type="tel" autocomplete="tel"></label>
+    <label>Période souhaitée<input placeholder="Ex. vacances d’hiver"></label>
+    <button type="submit">Envoyer à un conseiller</button>
+  </form>
+  <p class="done" id="done" hidden>Brief envoyé. Un conseiller Evaneos Travel vous rappelle avec une première proposition (maquette : rien n’est enregistré).</p>
+</dialog>
+
+<details class="vmenu">
+  <summary><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4L3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7"/></svg></i>Découvrir les autres versions</summary>
+  <nav><a href="../index.html">Version corporate</a><a href="../v2/index.html">Version tableau des départs</a></nav>
+</details>
+<div class="demo">Maquette de démonstration réalisée par Webminds · aucun formulaire n’est enregistré</div>
+<script src="../js/data.js"></script><script src="v3.js"></script>
+</body></html>
