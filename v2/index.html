@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Evaneos Travel · Tableau des départs</title>
+<meta name="description" content="Evaneos Travel, agence de voyage et de tourisme à Ben Aknoun : choisissez votre départ, on s’occupe de tout.">
+<link rel="icon" href="../img/mark.svg">
+<link rel="stylesheet" href="v2.css">
+</head><body>
+<header class="top">
+  <a href="#" class="logo" aria-label="Evaneos Travel"><img src="../img/mark-light.svg" alt=""><img src="../img/word-light.svg" alt="Evaneos Travel" class="w"></a>
+  <a class="call" href="tel:+213555398266">0555 39 82 66</a>
+</header>
+
+<main>
+<section class="board-sec" id="depart">
+  <div class="intro">
+    <p class="kicker">Aéroport d’Alger · Terminal Evaneos</p>
+    <h1>Où part-on ?</h1>
+    <p class="sub">Choisissez un départ sur le tableau : on trace le vol et on imprime votre billet.</p>
+  </div>
+  <div class="who" role="group" aria-label="Qui voyage">
+    <button class="on" data-who="tous">Tout le monde</button>
+    <button data-who="couple">En couple</button>
+    <button data-who="famille">En famille</button>
+    <button data-who="solo">En solo</button>
+  </div>
+  <div class="board" role="list" id="board"></div>
+  <p class="hint">Touchez une ligne pour embarquer</p>
+</section>
+
+<section class="flight" id="flight">
+  <div class="map-wrap">
+    <svg id="map" viewBox="0 0 1200 600" aria-label="Trajet du vol depuis Alger">
+      <defs>
+        <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#1f6d77"/></pattern>
+        <linearGradient id="trail" x1="0" x2="1"><stop offset="0" stop-color="#01C1CC" stop-opacity=".1"/><stop offset="1" stop-color="#01C1CC"/></linearGradient>
+      </defs>
+      <rect width="1200" height="600" fill="url(#dots)" opacity=".55"/>
+      <g class="lat"><path d="M0 150H1200M0 300H1200M0 450H1200"/></g>
+      <text x="380" y="215" class="sea">Méditerranée</text>
+      <text x="790" y="440" class="sea">Mer Rouge</text>
+      <g id="pins"></g>
+      <path id="route" d="" fill="none" stroke="url(#trail)" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 9"/>
+      <g id="plane" transform="translate(-100,-100)"><circle r="20" fill="#01C1CC" opacity=".18"/><path d="M-14 -2 L4 -2 L12 -10 L16 -10 L11 -2 L18 -2 L21 -6 L24 -6 L22 0 L24 6 L21 6 L18 2 L11 2 L16 10 L12 10 L4 2 L-14 2 Z" fill="#fff"/></g>
+    </svg>
+    <div class="flight-info" id="finfo"><span id="fi-from">ALG</span><i></i><span id="fi-to">—</span><small id="fi-h"></small></div>
+  </div>
+
+  <div class="printer">
+    <div class="slot" aria-hidden="true"></div>
+    <div class="paper" id="paper">
+      <article class="bp" id="bp">
+        <div class="bp-main">
+          <div class="bp-top"><img src="../img/logo.svg" alt="Evaneos Travel"><span>Carte d’embarquement</span></div>
+          <div class="bp-route"><div><b>ALG</b><small>Alger</small></div><svg viewBox="0 0 40 12"><path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="2"/></svg><div><b id="bp-code">SSH</b><small id="bp-city">Sharm El Sheikh</small></div></div>
+          <div class="bp-grid">
+            <div><small>Séjour</small><b id="bp-dur">—</b></div>
+            <div><small>Voyageurs</small><b id="bp-who">2 adultes</b></div>
+            <div><small>Tarif</small><b id="bp-price">—</b></div>
+            <div><small>Vol</small><b id="bp-h">—</b></div>
+          </div>
+          <p class="bp-pitch" id="bp-pitch"></p>
+        </div>
+        <div class="bp-stub" id="stub">
+          <small>Passager</small><b>Vous</b>
+          <small>Porte</small><b>Ben Aknoun</b>
+          <button class="tear" id="tear">Détacher et réserver</button>
+        </div>
+      </article>
+    </div>
+    <p class="price-note"><span class="dot"></span>Tarifs de l’été 2026 repris des publications d’Evaneos Travel · à valider par l’administration d’Evaneos Travel</p>
+  </div>
+</section>
+
+<section class="promise">
+  <h2>Partez l’esprit léger, on s’occupe de tout.</h2>
+  <div class="ptiles">
+    <div><b>Vol</b><p>Direct Air Algérie quand il existe, sinon le meilleur trajet.</p></div>
+    <div><b>Hôtel</b><p>Du 3 au 5 étoiles, all inclusive ou petit déjeuner.</p></div>
+    <div><b>Transferts</b><p>Aéroport, hôtel, aéroport, avec accueil sur place.</p></div>
+    <div><b>Assistance</b><p>Un conseiller joignable 24 h/24 pendant le voyage.</p></div>
+  </div>
+</section>
+
+<section class="djerba">
+  <div class="dj-head"><h2>Djerba, chaque vendredi</h2><p>Vol direct, 8 jours / 7 nuits en all inclusive. Faites glisser pour comparer les hôtels.</p></div>
+  <div class="dj-rail" id="rail"></div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="c-left">
+    <h2>Passez nous voir avant de partir</h2>
+    <p>Cité Sonelgaz n°19, Ben Aknoun, Alger 16000</p>
+    <div class="nums">
+      <a href="tel:+21323384444">023 38 44 44</a><a href="tel:+213555398266">0555 39 82 66</a><a href="tel:+213795835896">0795 83 58 96</a><a href="tel:+213658584104">0658 58 41 04</a>
+    </div>
+    <p><a href="mailto:evaneostravels@gmail.com">evaneostravels@gmail.com</a> · <a href="https://www.instagram.com/evaneos_travels/" target="_blank" rel="noopener">@evaneos_travels</a></p>
+  </div>
+  <iframe class="map-g" src="https://maps.google.com/maps?q=Cit%C3%A9%20Sonelgaz%2C%20Ben%20Aknoun%2C%20Alger&z=15&output=embed" loading="lazy" title="Carte : Evaneos Travel à Ben Aknoun" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+<footer class="foot"><img src="../img/logo-light.svg" alt="Evaneos Travel"><p>© 2026 SARL Evaneos Travel · Agence de voyage et de tourisme</p></footer>
+</main>
+
+<dialog id="book" aria-labelledby="book-t">
+  <form method="dialog" class="x"><button aria-label="Fermer">×</button></form>
+  <h3 id="book-t">Réserver <span id="book-dest"></span></h3>
+  <form id="bookf" class="bf">
+    <label>Nom complet<input required autocomplete="name"></label>
+    <label>Téléphone<input required type="tel" autocomplete="tel"></label>
+    <label>Mois de départ<select><option>Octobre</option><option>Novembre</option><option>Décembre</option><option>Janvier</option><option>Février</option><option>Mars</option><option>Avril</option><option>Mai</option><option>Juin</option><option>Juillet</option><option>Août</option><option>Septembre</option></select></label>
+    <button type="submit">Envoyer ma demande</button>
+  </form>
+  <p class="done" id="done" hidden>C’est noté. Un conseiller Evaneos Travel vous rappelle pour confirmer (maquette : rien n’est enregistré).</p>
+</dialog>
+
+<a class="vswitch" href="../index.html"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4L3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7"/></svg></i>Découvrir la version corporate</a>
+<div class="demo">Maquette de démonstration réalisée par Webminds · aucun formulaire n’est enregistré</div>
+<script src="../js/data.js"></script><script src="v2.js"></script>
+</body></html>
